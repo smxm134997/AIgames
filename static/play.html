@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>开始游戏</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="play-page">
+  <header class="topbar">
+    <div class="wrap topbar-inner play-head">
+      <a href="/" class="btn ghost">← 返回游戏库</a>
+      <div class="play-score">
+        <span class="play-score-label">分数</span>
+        <span class="play-score-num" id="score">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap play-main">
+    <div class="play-info">
+      <h1 id="gameTitle" class="play-title">加载中...</h1>
+      <div class="play-meta" id="gameMeta"></div>
+    </div>
+
+    <div class="play-stage">
+      <div id="gameContainer" class="game-container"></div>
+      <div id="gameOverlay" class="game-overlay hidden">
+        <div class="overlay-inner">
+          <h2 id="overlayTitle">本局结束</h2>
+          <p id="overlayScore"></p>
+          <button type="button" class="btn primary" id="btnRestart">再来一局</button>
+        </div>
+      </div>
+      <div id="noGame" class="no-game hidden">
+        <div class="no-game-icon">🎮</div>
+        <p id="noGameText">该游戏暂不可在线游玩。</p>
+        <a href="/" class="btn ghost">返回游戏库</a>
+      </div>
+    </div>
+
+    <p class="play-help" id="playHelp"></p>
+    <div class="play-actions">
+      <button type="button" class="btn primary" id="btnRestart2">重新开始</button>
+    </div>
+  </main>
+
+  <script src="/games/snake.js"></script>
+  <script src="/games/g2048.js"></script>
+  <script src="/games/breakout.js"></script>
+  <script src="/games/memory.js"></script>
+  <script src="/games/dodge.js"></script>
+  <script src="/games/catch.js"></script>
+  <script src="/play.js"></script>
+</body>
+</html>
